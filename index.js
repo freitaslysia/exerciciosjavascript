@@ -1,6 +1,6 @@
 import express from "express"
 import { somar } from './exercicios/um.js';
-import { fup2, multi } from './exercicios/dois.js';
+import { multi } from './exercicios/dois.js';
 
 const app = express();
 app.use(express.json());
