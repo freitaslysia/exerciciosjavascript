@@ -7,9 +7,8 @@ const port = 3000;
 
 app.post("/api/exercicio", (req, res) => {
     const result = somar(req.body.num1, req.body.num2)
-
     res.status(201).json({ 
-        message: `${introducao}` })
+        message: `resultado ${result}` })
 });
 
 app.listen(port, () => {
