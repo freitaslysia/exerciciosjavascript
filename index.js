@@ -1,17 +1,15 @@
 import express from "express"
+import { intro } from "./exercicios/zero";
 
 const app = express();
 app.use(express.json());
 const port = 3000;
 
 app.post("/api/exercicio", (req, res) => {
-    console.log(req.body)
-    const num1 = req.body.num1;
-    const num2 = req.body.num2;
-    const result = num1 + num2;
+    const introducao = intro;
 
-
-    res.status(201).json({ message: `O resultado é ${result}` })
+    res.status(201).json({ 
+        message: `${introducao}` })
 });
 
 app.listen(port, () => {
