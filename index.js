@@ -1,12 +1,12 @@
 import express from "express"
-import { intro } from "./exercicios/zero";
+import { somar } from './exercicios/um.js';
 
 const app = express();
 app.use(express.json());
 const port = 3000;
 
 app.post("/api/exercicio", (req, res) => {
-    const introducao = intro;
+    const result = somar(req.body.num1, req.body.num2)
 
     res.status(201).json({ 
         message: `${introducao}` })
